@@ -27,6 +27,8 @@ Nach diesem Kurse sollten Sie ...
 
 ## Zeitplan
 
+### Überblick
+
 @tbl-zeitplan zeigt den chronologischen Ablauf des Moduls.
 
 
@@ -77,4 +79,12 @@ ganttrify(d2,
 
 @fig-grob zeigt den groben Ablauf der Erstellung Ihrer Abschlussarbeit.
 
-![Grobablauf der Erstellung Ihrer Abschlussarbeit](img/ablauf-thesis.png){#fig-grob width=50%}
+![Grobablauf der Erstellung Ihrer Abschlussarbeit](img/ablauf-thesis.png){#fig-grob width=80%}
+
+
+### Prüfungstag
+
+Die Prüfung findet zu folgenden Tagen statt:
+
+- 16. Januar 2024
+- 17. Januar 2024

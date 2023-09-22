@@ -1,0 +1,44 @@
+# Ressourcen
+
+
+
+
+## Fopro
+
+Werfen Sie einen Blick (oder mehrere) in das Kursbuch zum Modul [FoPro](https://fopro.netlify.app/).
+
+
+
+## Titel von Abschlussarbeiten
+
+
+Hier ist eine Liste von Titeln von früheren (von mir betreuten) Abschlussarbeiten.
+
+
+```{r source-timetable, echo = FALSE}
+#| label: tbl-zeitplan
+#| tbl-cap: Modulzeitplan
+thesis_title <- "specifics/supervised-theses-sauer.xlsx"
+stopifnot(file.exists(thesis_title))
+theses <- 
+  readxl::read_xlsx(thesis_title) 
+
+
+knitr::kable(theses)
+```
+
+
+## Literaturempfehlungen
+
+
+In [dieser Zotero-Gruppe](https://www.zotero.org/groups/2502975/ses-emp-fo) finden Sie Literatur zum Thema Forschungsmethodik.
+
+
+
+
+
+
+
+
+
+
