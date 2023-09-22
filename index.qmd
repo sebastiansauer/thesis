@@ -1,0 +1,42 @@
+# Hinweise
+
+
+```{r libs-hidden}
+#| include: false
+library("tidyverse")
+
+theme_set(theme_minimal())
+```
+
+
+## Lernziele
+
+Nach diesem Kurse sollten Sie ...
+
+- typische Probleme und deren Lösungen beim Verfassen einer Abschlussarbeit kennen
+- Methoden des wissenschaftlichen Arbeitens praktisch anwenden können
+- wissen, wie man eine wissenschaftliche Arbeit im Rahmen eines Kolloquiums verteidigt
+
+
+
+
+## Modulzeitplan
+
+
+
+```{r source-timetable, echo = FALSE}
+timetable_file <- "specifics/Modulverlauf.xlsx"
+stopifnot(file.exists(timetable_file))
+timetable <- 
+  readxl::read_xlsx(timetable_file) |> 
+  select(Nr = nr, Wochendatum = start_date, Thema = activity)
+  
+
+gt::gt(timetable) |> 
+  gt::cols_width(
+    1 ~ gt::pct(5),
+    2 ~ gt::pct(20),
+    #3 ~ gt::pct(20),
+    3 ~ gt::pct(45)
+  )
+```
