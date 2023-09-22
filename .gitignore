@@ -4,3 +4,11 @@
 .Ruserdata
 
 /.quarto/
+
+
+# test:
+test*.*
+test.*
+*/test.*
+*/test*.*
+
