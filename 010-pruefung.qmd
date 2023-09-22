@@ -1,0 +1,14 @@
+# Prüfung
+
+
+## Bachelorseminar: Kolloquium
+
+
+{{< include Hinweise/Hinweise-Kolloquium.qmd >}}
+
+
+### Bonusleistung: Probe-Kolloquium
+
+
+Die Bonusleistung dient dazu, dass Sie die (besondere) Situation eines Kolloquiums üben können im Rahmen eines "freundlichen Mini-Kolloquiums".
+

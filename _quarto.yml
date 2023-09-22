@@ -2,14 +2,15 @@ project:
   type: book
 
 book:
-  title: "thesis"
-  author: "Norah Jones"
-  date: "9/22/2023"
+  title: "thesis - Abschlussarbeiten schreiben und verteidigen"
+  author: "Sebastian Sauer"
+  date: today
   chapters:
     - index.qmd
+    - 010-pruefung.qmd
 
 
-bibliography: references.bib
+bibliography: bib/bib.bib
 
 format:
   html:

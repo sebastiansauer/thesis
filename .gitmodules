@@ -1,3 +1,6 @@
 [submodule "Hinweise"]
 	path = Hinweise
 	url = https://github.com/sebastiansauer/Hinweise
+[submodule "bib"]
+	path = bib
+	url = https://github.com/sebastiansauer/bib
