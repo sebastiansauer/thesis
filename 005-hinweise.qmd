@@ -1,0 +1,57 @@
+# Hinweise
+
+
+
+
+
+
+## Lernhilfen
+
+
+
+
+
+{{< include Hinweise/Hinweise-Lernhilfen.qmd >}}
+
+
+
+
+
+
+## Didaktik
+
+
+
+
+
+{{< include Hinweise/Hinweise-Didaktik.qmd >}} 
+
+
+
+
+## Organisatorische Hinweise
+
+
+
+{{< include Hinweise/Hinweise-Unterricht.qmd >}}
+
+
+
+
+
+
+
+
+## Technische Details
+
+Dieses Dokument wurde erzeugt am/um `r Sys.time()`.
+
+
+```{r}
+#| echo: false
+
+sessioninfo::session_info()
+
+```
+
+

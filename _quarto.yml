@@ -7,7 +7,10 @@ book:
   date: today
   chapters:
     - index.qmd
+    - 005-hinweise.qmd
     - 010-pruefung.qmd
+    - 020-hinweise-thesis.qmd
+    
 
 
 bibliography: bib/bib.bib

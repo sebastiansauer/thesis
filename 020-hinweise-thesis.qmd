@@ -1,0 +1,13 @@
+# Hinweise zur Thesis
+
+## Formalia
+
+{{< include Hinweise/Hinweise-Thesis.qmd >}}
+
+
+
+## Im Übrigen
+
+🍀🍀🍀 Viel Erfolg! 🍀🍀🍀
+
+

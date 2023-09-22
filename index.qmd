@@ -1,13 +1,18 @@
-# Hinweise
+# Organisatorisches
 
 
 ```{r libs-hidden}
 #| include: false
 library("tidyverse")
+library("ganttrify")
 
 theme_set(theme_minimal())
 ```
 
+
+![Thesis ✅](img/thesis.jpeg){width=33%}
+
+[Bildquelle: Bing Image Creator, Microsoft](https://www.bing.com/images/create/a-thesis2c-the-happy-result-of-a-hard-academic-work/650d99ad01894ee9999270ffd8f33055?FORM=GENCRE)
 
 ## Lernziele
 
@@ -20,19 +25,25 @@ Nach diesem Kurse sollten Sie ...
 
 
 
-## Modulzeitplan
+## Zeitplan
 
+@tbl-zeitplan zeigt den chronologischen Ablauf des Moduls.
 
 
 ```{r source-timetable, echo = FALSE}
+#| label: tbl-zeitplan
+#| tbl-cap: Modulzeitplan
 timetable_file <- "specifics/Modulverlauf.xlsx"
 stopifnot(file.exists(timetable_file))
 timetable <- 
-  readxl::read_xlsx(timetable_file) |> 
+  readxl::read_xlsx(timetable_file) 
+
+timetable2 <-
+  timetable |> 
   select(Nr = nr, Wochendatum = start_date, Thema = activity)
   
 
-gt::gt(timetable) |> 
+gt::gt(timetable2) |> 
   gt::cols_width(
     1 ~ gt::pct(5),
     2 ~ gt::pct(20),
@@ -42,57 +53,28 @@ gt::gt(timetable) |>
 ```
 
 
-
-
-
-
-## Lernhilfen
-
-
-
-
-
-{{< include Hinweise/Hinweise-Lernhilfen.qmd >}}
-
-
-
-
-
-
-## Didaktik
-
-
-
-
-
-{{< include Hinweise/Hinweise-Didaktik.qmd >}} 
-
-
-
-
-## Organisatorische Hinweise
-
-
-
-{{< include Hinweise/Hinweise-Unterricht.qmd >}}
-
-
-
-
-
-
-
-
-## Technische Details
-
-Dieses Dokument wurde erzeugt am/um `r Sys.time()`.
-
+@fig-zeitplan zeigt ein Gantt-Diagramm zum Ablauf des Moduls.
 
 ```{r}
 #| echo: false
+#| label: fig-zeitplan
+#| fig-cap: Gantt-Diagramm des Modulablaufs
+d2 <- timetable %>% 
+  mutate(start_date = ymd(start_date),
+         end_date = start_date + 7)
 
-sessioninfo::session_info()
 
+ganttrify(d2,
+          project_start_date = "2023-09",
+          hide_wp = TRUE,
+          month_number_label = FALSE,
+          month_breaks = 1,
+          by_date = TRUE,
+          exact_date = TRUE,
+          font_family = "Roboto Condensed")
 ```
 
 
+@fig-grob zeigt den groben Ablauf der Erstellung Ihrer Abschlussarbeit.
+
+![Grobablauf der Erstellung Ihrer Abschlussarbeit](img/ablauf-thesis.png){#fig-grob width=50%}
