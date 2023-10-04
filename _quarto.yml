@@ -1,5 +1,7 @@
 project:
   type: book
+  
+lang: de
 
 book:
   title: "thesis - Abschlussarbeiten schreiben und verteidigen"
@@ -15,10 +17,20 @@ book:
 
 
 bibliography: bib/bib.bib
-
 format:
   html:
-    theme: cosmo
+    toc: true
+    theme:
+      light: cosmo
+      dark: darkly
+    #css: styles.css
+    number-sections: true
+    df-print: paged
+    code-fold: false
+    fig-align: center
+    code-link: true
+    mermaid:
+      theme: neutral
 
 
 
