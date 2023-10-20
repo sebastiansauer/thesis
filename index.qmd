@@ -24,10 +24,20 @@ Nach diesem Kurse sollten Sie ...
 
 
 
+## Überblick zum Modul
+
+Das Modul *Bachelorseminar* strukturiert die Betreuung Ihrer Abschlussarbeit:
+
+- Wir besprechen Ihre Fragen.
+- Der Dozent gibt Feedback zu Ihrem Fortschritt
+- Sie stellen den Fortschritt Ihrer Arbeit vor.
+- Sie geben Feedback auf die Arbeit Ihrer Kommiliton:innen - und erhalten im Gegenzug - Feedback.
+- Wir wiederholen nach Bedarf etwaige Inhalte aus dem Bereich wissenschaftliches oder - empirisches Arbeit oder vertiefen diese.
+
+
 
 ## Zeitplan
 
-### Überblick
 
 @tbl-zeitplan zeigt den chronologischen Ablauf des Moduls.
 
@@ -35,6 +45,10 @@ Nach diesem Kurse sollten Sie ...
 ```{r source-timetable, echo = FALSE}
 #| label: tbl-zeitplan
 #| tbl-cap: Modulzeitplan
+#| cache: false
+#| echo: false
+
+
 timetable_file <- "specifics/Modulverlauf.xlsx"
 stopifnot(file.exists(timetable_file))
 timetable <- 
@@ -42,7 +56,7 @@ timetable <-
 
 timetable2 <-
   timetable |> 
-  select(Nr = nr, Wochendatum = start_date, Thema = activity)
+  select(Nr = nr, Wochendatum = start_date, Thema = activity_long)
   
 
 gt::gt(timetable2) |> 
@@ -82,7 +96,7 @@ ganttrify(d2,
 ![Grobablauf der Erstellung Ihrer Abschlussarbeit](img/ablauf-thesis.png){#fig-grob width=80%}
 
 
-### Prüfungstag
+## Prüfungstag {#prüfungstag}
 
 Die Prüfung findet zu folgenden Tagen statt:
 

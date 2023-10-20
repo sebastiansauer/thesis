@@ -4,7 +4,7 @@ project:
 lang: de
 
 book:
-  title: "thesis - Abschlussarbeiten schreiben und verteidigen"
+  title: "Bachelorseminar"
   author: "Sebastian Sauer"
   date: today
   chapters:
@@ -12,7 +12,9 @@ book:
     - 005-hinweise.qmd
     - 010-pruefung.qmd
     - 020-hinweise-thesis.qmd
+    - 030-reviews.qmd
     - 050-ressourcen.qmd
+    - 100-Literatur.qmd
     
 
 
@@ -21,8 +23,8 @@ format:
   html:
     toc: true
     theme:
-      light: cosmo
-      dark: darkly
+      light: sandstone
+      dark: solar
     #css: styles.css
     number-sections: true
     df-print: paged

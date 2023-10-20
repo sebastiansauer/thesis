@@ -1,12 +1,11 @@
 # Hinweise zur Thesis
 
-## Formalia
 
-{{< include Hinweise/Hinweise-Thesis.qmd >}}
-
+Lesen Sie [im Hinweisbuch](https://hinweisbuch.netlify.app/hinweise-pruefung-thesis-frame) die Hinweise zur Abschlussarbeit nach.
 
 
-## Im Übrigen
+
+Im Übrigen ...
 
 🍀🍀🍀 Viel Erfolg! 🍀🍀🍀
 

@@ -5,35 +5,13 @@
 
 
 
-## Lernhilfen
+- [Lernhilfen](https://hinweisbuch.netlify.app/hinweise-lernhilfen-frame)
+- [Didaktikkonzept des Moduls](https://hinweisbuch.netlify.app/hinweise-didaktik-frame)
+- [Organisatorische Hinweise](https://hinweisbuch.netlify.app/hinweise-unterricht-frame)
 
 
 
 
-
-{{< include Hinweise/Hinweise-Lernhilfen.qmd >}}
-
-
-
-
-
-
-## Didaktik
-
-
-
-
-
-{{< include Hinweise/Hinweise-Didaktik.qmd >}} 
-
-
-
-
-## Organisatorische Hinweise
-
-
-
-{{< include Hinweise/Hinweise-Unterricht.qmd >}}
 
 
 

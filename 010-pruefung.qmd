@@ -1,28 +1,11 @@
 # Prüfung 
 
+- *Prüfungsform*: *Präsentation*
+- Bewertung: bestanden vs. nicht-bestanden, es werden keine Noten vergeben
+- Bonusleistung: keine
+- [Prüfungstag](#prüfungstag)
+- Die Prüfung ist grundsätzlich in *Präsenz* zu erbringen. Ausnahmen sind bei Auslandsaufenthalten u.U. möglich.
 
-## Bachelorseminar: Kolloquium
-
-
-{{< include Hinweise/Hinweise-Pruefung-Kolloquium.qmd >}}
-
-
-### Bonusleistung: Probe-Kolloquium
-
-
-Die Bonusleistung dient dazu, dass Sie die (besondere) Situation eines Kolloquiums üben können im Rahmen eines "freundlichen Mini-Kolloquiums".
-
-Ziele und Rahmen gleichen denen des Kolloquiums.
-
-
-## Bachelorarbeit
-
-
-📘 😃 🍀 
-
-
-
-
-
+Lesen Sie [im Hinweisbuch](https://hinweisbuch.netlify.app/hinweise-pruefung-praesentation-frame) die Prüfungshinweise nach.
 
 
