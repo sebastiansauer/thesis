@@ -2,3 +2,6 @@
   quarto-pub:
     - id: 63968580-1eef-4f42-8fa8-6b1012e2caf1
       url: 'https://ssauer-quarto.quarto.pub/thesis'
+  netlify:
+    - id: f7ecdfd0-3206-464c-8ed3-bc161d1f6f24
+      url: 'https://astonishing-crostata-d93501.netlify.app'
