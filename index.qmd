@@ -3,10 +3,10 @@
 
 ```{r libs-hidden}
 #| include: false
-library("tidyverse")
-library("ganttrify")
+#library("tidyverse")
+#library("ganttrify")
 
-theme_set(theme_minimal())
+#theme_set(theme_minimal())
 ```
 
 
@@ -36,10 +36,11 @@ Das Modul *Bachelorseminar* strukturiert die Betreuung Ihrer Abschlussarbeit:
 
 
 
-## Zeitplan
+## Modulverlauf {#seq-modulverlauf}
 
 
-@tbl-zeitplan zeigt den chronologischen Ablauf des Moduls.
+
+[Hier](https://docs.google.com/spreadsheets/d/1G2sG-Av_14r0OhpDVTb0iyQ9ebmKPJI1vx6_0IwTBgM/edit#gid=129396342) finden Sie einen Überblick zum Modulverlauf.   
 
 
 ```{r source-timetable, echo = FALSE}
@@ -47,6 +48,7 @@ Das Modul *Bachelorseminar* strukturiert die Betreuung Ihrer Abschlussarbeit:
 #| tbl-cap: Modulzeitplan
 #| cache: false
 #| echo: false
+#| eval: false
 
 
 timetable_file <- "specifics/Modulverlauf.xlsx"
@@ -69,12 +71,13 @@ gt::gt(timetable2) |>
 ```
 
 
-@fig-zeitplan zeigt ein Gantt-Diagramm zum Ablauf des Moduls.
+
 
 ```{r}
 #| echo: false
 #| label: fig-zeitplan
 #| fig-cap: Gantt-Diagramm des Modulablaufs
+#| eval: false
 d2 <- timetable %>% 
   mutate(start_date = ymd(start_date),
          end_date = start_date + 7)

@@ -1,5 +1,8 @@
 # Prüfung 
 
+
+## Prüfungsformat
+
 - *Prüfungsform*: *Präsentation*
 - Bewertung: bestanden vs. nicht-bestanden, es werden keine Noten vergeben
 - Bonusleistung: keine
@@ -7,5 +10,18 @@
 - Die Prüfung ist grundsätzlich in *Präsenz* zu erbringen. Ausnahmen sind bei Auslandsaufenthalten u.U. möglich.
 
 Lesen Sie [im Hinweisbuch](https://hinweisbuch.netlify.app/hinweise-pruefung-praesentation-frame) die Prüfungshinweise nach.
+
+
+
+## Probekolloquium
+
+Ggf. wird im Unterricht ein Probekolloquium angeboten (s. @sec-modulverlauf).
+Das Probekolloquium soll Sie auf die Prüfung vorbereiten; es bietet einen Rahmen zum Üben.
+
+Die Rahmenbedingungen (Dauer, Format, etc.) sind identisch zur Format der Prüfung.
+
+Der Prüfer gibt öffentliches Feedback zum Vortrag.
+
+
 
 

@@ -3,12 +3,12 @@
 
 
 
-
+## Hinweise
 
 - [Lernhilfen](https://hinweisbuch.netlify.app/hinweise-lernhilfen-frame)
 - [Didaktikkonzept des Moduls](https://hinweisbuch.netlify.app/hinweise-didaktik-frame)
 - [Organisatorische Hinweise](https://hinweisbuch.netlify.app/hinweise-unterricht-frame)
-
+- [Hinweise en masse](https://hinweisbuch.netlify.app/)
 
 
 
