@@ -3,8 +3,9 @@
 
 ```{r libs-hidden}
 #| include: false
-#library("tidyverse")
-#library("ganttrify")
+library("tidyverse")
+library("ganttrify")
+library(googlesheets4)
 
 #theme_set(theme_minimal())
 ```
@@ -39,8 +40,21 @@ Das Modul *Bachelorseminar* strukturiert die Betreuung Ihrer Abschlussarbeit:
 ## Modulverlauf {#seq-modulverlauf}
 
 
+```{r}
+#| echo: false
+#| message: false
+#library(googlesheets4)
+timetable_file <- "https://docs.google.com/spreadsheets/d/1G2sG-Av_14r0OhpDVTb0iyQ9ebmKPJI1vx6_0IwTBgM/edit#gid=129396342"
 
-[Hier](https://docs.google.com/spreadsheets/d/1G2sG-Av_14r0OhpDVTb0iyQ9ebmKPJI1vx6_0IwTBgM/edit#gid=129396342) finden Sie einen Überblick zum Modulverlauf.   
+timetable <- read_sheet(timetable_file)
+```
+
+
+
+👉 [Hier](https://docs.google.com/spreadsheets/d/1G2sG-Av_14r0OhpDVTb0iyQ9ebmKPJI1vx6_0IwTBgM/edit#gid=129396342) finden Sie einen Überblick zum Modulverlauf.   
+
+
+@tbl-zeitplan stellt den Modulverlauf tabellarisch dar.
 
 
 ```{r source-timetable, echo = FALSE}
@@ -48,17 +62,17 @@ Das Modul *Bachelorseminar* strukturiert die Betreuung Ihrer Abschlussarbeit:
 #| tbl-cap: Modulzeitplan
 #| cache: false
 #| echo: false
-#| eval: false
+#| eval: true
 
 
-timetable_file <- "specifics/Modulverlauf.xlsx"
-stopifnot(file.exists(timetable_file))
-timetable <- 
-  readxl::read_xlsx(timetable_file) 
+# timetable_file <- "specifics/Modulverlauf.xlsx"
+# stopifnot(file.exists(timetable_file))
+# timetable <- 
+#   readxl::read_xlsx(timetable_file) 
 
 timetable2 <-
   timetable |> 
-  select(Nr = nr, Wochendatum = start_date, Thema = activity_long)
+  select(Nr = Nr, Wochendatum = start_date, Thema = activity, Details = details)
   
 
 gt::gt(timetable2) |> 
@@ -71,17 +85,18 @@ gt::gt(timetable2) |>
 ```
 
 
+@fig-zeitplan stellt den Zeitplan als Verlaufsdiagramm (Ganttdiagramm) dar.
 
 
 ```{r}
 #| echo: false
 #| label: fig-zeitplan
 #| fig-cap: Gantt-Diagramm des Modulablaufs
-#| eval: false
+#| eval: true
+
 d2 <- timetable %>% 
   mutate(start_date = ymd(start_date),
          end_date = start_date + 7)
-
 
 ganttrify(d2,
           project_start_date = "2023-09",
@@ -101,7 +116,4 @@ ganttrify(d2,
 
 ## Prüfungstag {#prüfungstag}
 
-Die Prüfung findet zu folgenden Tagen statt:
-
-- 16. Januar 2024
-- 17. Januar 2024
+Die Termine für die Prüfung werden in Moodle bekannt gegeben.
