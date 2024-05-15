@@ -5,9 +5,9 @@
 
 ## Hinweise
 
-- [Lernhilfen](https://hinweisbuch.netlify.app/hinweise-lernhilfen-frame)
-- [Didaktikkonzept des Moduls](https://hinweisbuch.netlify.app/hinweise-didaktik-frame)
-- [Organisatorische Hinweise](https://hinweisbuch.netlify.app/hinweise-unterricht-frame)
+- [Lernhilfen](https://hinweisbuch.netlify.app/160-hinweise-lernhilfen-frame)
+- [Didaktikkonzept des Moduls](https://hinweisbuch.netlify.app/110-hinweise-didaktik-frame)
+- [Organisatorische Hinweise](https://hinweisbuch.netlify.app/120-hinweise-unterricht-frame)
 - [Hinweise en masse](https://hinweisbuch.netlify.app/)
 
 

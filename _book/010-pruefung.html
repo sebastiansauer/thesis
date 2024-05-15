@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.513">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -64,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -198,11 +199,12 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="index.html#prüfungstag">Prüfungstag</a></li>
 <li>Die Prüfung ist grundsätzlich in <em>Präsenz</em> zu erbringen. Ausnahmen sind bei Auslandsaufenthalten u.U. möglich.</li>
 </ul>
-<p>Lesen Sie <a href="https://hinweisbuch.netlify.app/hinweise-pruefung-praesentation-frame">im Hinweisbuch</a> die Prüfungshinweise nach.</p>
+<p>Lesen Sie <a href="https://hinweisbuch.netlify.app/050-hinweise-pruefung-praesentation-frame">im Hinweisbuch</a> die Prüfungshinweise nach.</p>
 </section>
 <section id="probekolloquium" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="probekolloquium"><span class="header-section-number">3.2</span> Probekolloquium</h2>
-<p>Ggf. wird im Unterricht ein Probekolloquium angeboten (s. <span class="quarto-unresolved-ref">?sec-modulverlauf</span>). Das Probekolloquium soll Sie auf die Prüfung vorbereiten; es bietet einen Rahmen zum Üben.</p>
+<p>Ggf. wird im Unterricht ein Probekolloquium angeboten.</p>
+<p>Das Probekolloquium soll Sie auf die Prüfung vorbereiten; es bietet einen Rahmen zum Üben.</p>
 <p>Die Rahmenbedingungen (Dauer, Format, etc.) sind identisch zur Format der Prüfung.</p>
 <p>Der Prüfer gibt öffentliches Feedback zum Vortrag.</p>
 
@@ -482,27 +484,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -517,10 +498,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -529,8 +514,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

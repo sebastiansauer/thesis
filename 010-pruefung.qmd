@@ -9,13 +9,14 @@
 - [Prüfungstag](#prüfungstag)
 - Die Prüfung ist grundsätzlich in *Präsenz* zu erbringen. Ausnahmen sind bei Auslandsaufenthalten u.U. möglich.
 
-Lesen Sie [im Hinweisbuch](https://hinweisbuch.netlify.app/hinweise-pruefung-praesentation-frame) die Prüfungshinweise nach.
+Lesen Sie [im Hinweisbuch](https://hinweisbuch.netlify.app/050-hinweise-pruefung-praesentation-frame) die Prüfungshinweise nach.
 
 
 
 ## Probekolloquium
 
-Ggf. wird im Unterricht ein Probekolloquium angeboten (s. @sec-modulverlauf).
+Ggf. wird im Unterricht ein Probekolloquium angeboten.
+
 Das Probekolloquium soll Sie auf die Prüfung vorbereiten; es bietet einen Rahmen zum Üben.
 
 Die Rahmenbedingungen (Dauer, Format, etc.) sind identisch zur Format der Prüfung.
