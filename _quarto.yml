@@ -7,6 +7,7 @@ book:
   title: "Bachelorseminar"
   author: "Sebastian Sauer"
   date: today
+  repo-url: https://bachelorseminar.netlify.app/
   chapters:
     - index.qmd
     - 005-hinweise.qmd
